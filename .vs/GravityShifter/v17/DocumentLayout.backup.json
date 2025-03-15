@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\azcom\\GravityShifter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\gravity eater\\new logic\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\new logic\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\enemy scripts\\gravity eater\\enemygravityeaters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\enemygravityeaters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\gravity eater\\new logic\\enemymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\new logic\\enemymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\player scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\player scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyGravityEaters.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\EnemyGravityEaters.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\EnemyGravityEaters.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\EnemyGravityEaters.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\EnemyGravityEaters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T16:56:58.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GravityEaterHealth.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterHealth.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterHealth.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T12:31:38.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GravityEaterDamage.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterDamage.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterDamage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterDamage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T15:31:48.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Player Scripts\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\PlayerHealth.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Player Scripts\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\PlayerHealth.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T17:03:16.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyAI.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyAI.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyAI.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwKsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T05:45:37.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyManager.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\EnemyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\EnemyManager.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\EnemyManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\EnemyManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:21:16.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyMovement.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyMovement.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\New Logic\\EnemyMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T06:03:27.496Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
