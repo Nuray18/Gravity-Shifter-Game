@@ -6,3 +6,12 @@ UserSettings/
 *.sln
 *.csproj
 .unitypackage
+Library/
+Logs/
+Temp/
+Obj/
+Build/
+Builds/
+UserSettings/
+*.sln
+*.unitypackage
