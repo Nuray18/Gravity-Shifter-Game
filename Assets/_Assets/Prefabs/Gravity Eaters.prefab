@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1540306067315240050}
   - component: {fileID: 7524146564838348875}
   - component: {fileID: 3818175037334719654}
-  m_Layer: 10
+  - component: {fileID: 3416126185038652051}
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &3416126185038652051
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787629940620674117}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3509022803679304081
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,9 +117,7 @@ GameObject:
   - component: {fileID: 1293443609009646758}
   - component: {fileID: 6684686843527484350}
   - component: {fileID: 2954522854761083251}
-  - component: {fileID: 4408930758370724721}
-  - component: {fileID: 1845943368043345067}
-  - component: {fileID: 8670683980285540849}
+  - component: {fileID: 6493424908738911793}
   m_Layer: 7
   m_Name: Gravity Eaters
   m_TagString: Enemy
@@ -143,7 +163,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -163,7 +183,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -193,7 +213,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4408930758370724721
+--- !u!114 &6493424908738911793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,40 +222,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3509022803679304081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3adbf0f9bbe92af4a833e5a583a51cba, type: 3}
+  m_Script: {fileID: 11500000, guid: a4f398dd91d1f5342bb909f2b737890b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
---- !u!114 &1845943368043345067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509022803679304081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71815a2e5fb80fb469a3db0488f8a2ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetRange: 50
-  attackRange: 10
-  stopChaseDistance: 80
-  attackCooldown: 0.3
-  damage: 5
-  findTargetInterval: 1
   player: {fileID: 0}
---- !u!114 &8670683980285540849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509022803679304081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc08eaded999604697786196a48b650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolRadius: 10
-  target: {fileID: 0}
+  chaseRange: 10
+  attackRange: 1.5
+  moveSpeed: 2
+  patrolRadius: 5

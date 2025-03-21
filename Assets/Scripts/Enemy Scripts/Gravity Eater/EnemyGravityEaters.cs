@@ -42,15 +42,19 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
 
     void Update()
     {
-        //if (agent != null)
-        //{
-        //    Debug.Log(gameObject.name + " isOnNavMesh: " + agent.isOnNavMesh);
-        //}
-
-        if (isPlayerInZone && player != null && agent != null && agent.isOnNavMesh)
+        if (agent != null && agent.isOnNavMesh)
         {
-            // Oyuncuyu takip et
-            agent.SetDestination(player.position);
+            if (isPlayerInZone && player != null)
+            {
+                if (!agent.pathPending && agent.isStopped == false)
+                {
+                    agent.SetDestination(player.position);
+                }
+            }
+            else if (!isMovingToTarget) // Oyuncu alanda değilse tekrar gezmeye başla
+            {
+                StartCoroutine(Patrol());
+            }
         }
     }
 
@@ -59,11 +63,11 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
         if (other.CompareTag("Player"))
         {
             isPlayerInZone = true;
+            agent.isStopped = false;  // Hareketi aktif et
 
-            // Oyuncunun sadece yerçekimi değiştirme özelliğini kapat
             if (playerScript != null)
             {
-                playerScript.canChangeGravity = false; // Yerçekimi değiştirme devre dışı
+                playerScript.canChangeGravity = false;
             }
         }
     }
@@ -72,12 +76,13 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player çıkış yaptı, gravity değiştirilebilir!");
             isPlayerInZone = false;
+            agent.isStopped = false;
 
-            // Oyuncunun yerçekimi değiştirme özelliğini yeniden aktif et
             if (playerScript != null)
             {
-                playerScript.canChangeGravity = true; // Yerçekimi değiştirme yeniden etkin
+                playerScript.canChangeGravity = true;
             }
         }
     }
@@ -145,10 +150,12 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
     public void ResetEnemy()
     {
         StopAllCoroutines();
+        isMovingToTarget = false;
+
         transform.position = initialPosition;
         transform.rotation = initialRotation;
 
-        if (agent != null)
+        if (agent != null && agent.isOnNavMesh)
         {
             agent.Warp(initialPosition); // Karakteri sıfırla
             agent.isStopped = false;
@@ -157,6 +164,11 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
 
         ResetAI();
         GetComponent<GravityEaterHealth>()?.ResetHealth();
+
+        if (playerScript != null)
+        {
+            playerScript.canChangeGravity = true;
+        }
 
         gameObject.SetActive(true);
         StartCoroutine(Patrol()); // Patrol'u yeniden başlat
@@ -171,6 +183,12 @@ public class EnemyGravityEater : MonoBehaviour, IEnemy
         if (agent != null)
         {
             agent.isStopped = true;
+        }
+
+        // Oyuncunun gravity değiştirme yetkisini geri ver
+        if (playerScript != null)
+        {
+            playerScript.canChangeGravity = true;
         }
 
         // enemyleri EnemyManager'deki enemies arrayinden siliyoruz
