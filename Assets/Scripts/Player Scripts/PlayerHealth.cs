@@ -54,12 +54,7 @@ public class PlayerHealth : MonoBehaviour
             Die(); // Sağlık 0 ise ölme işlemi
         }
     }
-    void Die()
-    {
-        Debug.Log("Player is dead!");
-        // Oyuncu öldüğünde yapılacaklar
-    }
-
+    
     public void ResetHealth() // Yeni fonksiyon!
     {
         currentHealth = maxHealth;
@@ -68,5 +63,23 @@ public class PlayerHealth : MonoBehaviour
         {
             healthUI.UpdateHealthText(currentHealth, maxHealth);
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player is dead!");
+
+        GameOverPanel gameOverPanel = GameManager.instance?.GetGameOverPanel();
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.ShowGameOver();
+        }
+        else
+        {
+            Debug.LogError("GameOverPanel bulunamadı!");
+        }
+
+        Time.timeScale = 0f;
     }
 }

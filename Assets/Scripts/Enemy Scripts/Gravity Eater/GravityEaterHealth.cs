@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class GravityEaterHealth : MonoBehaviour, IHealth
 {
     private float currentHealth;
     [SerializeField]
-    private float maxHealth = 30;
+    private float maxHealth = 40;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class GravityEaterHealth : MonoBehaviour, IHealth
 
     private void Die()
     {
-        GetComponent<EnemyGravityEater>()?.Die();
+        GetComponent<GravityEaterAI>()?.Die();
     }
 
     public void ResetHealth()

@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public PlayerHealthUI playerHealthUI; // Tüm sahneler için ortak UI
 
+
+    private GameOverPanel gameOverPanel;
+
     void Awake()
     {
         if (instance == null)
@@ -30,11 +33,35 @@ public class GameManager : MonoBehaviour
         {
             navMeshRebuilder = FindObjectOfType<NavMeshRebuilder>();
             RestartLighting();
+            FindGameOverPanel();
         }
         else
         {
             navMeshRebuilder = null;
         }
+
+        FindGameOverPanel();
+    }
+
+    private void FindGameOverPanel()
+    {
+        if (gameOverPanel == null)
+        {
+            GameObject panelObject = GameObject.FindWithTag("GameOverPanel");
+            if (panelObject != null)
+            {
+                gameOverPanel = panelObject.GetComponent<GameOverPanel>();
+            }
+        }
+    }
+
+    public GameOverPanel GetGameOverPanel()
+    {
+        if (gameOverPanel == null)
+        {
+            FindGameOverPanel();
+        }
+        return gameOverPanel;
     }
 
     void Start()
@@ -53,6 +80,11 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         PlayerManager.instance.isRestarting = true;
+
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.HideGameOver(); // Yeni bir fonksiyon yazacağız
+        }
 
         // Düşmanları temizle ve sıfırla
         EnemyManager.instance?.ClearEnemies();

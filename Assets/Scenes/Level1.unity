@@ -23605,6 +23605,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1722951289368497707, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956562289129723069, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3713101716932684394, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
       propertyPath: playerPrefab
@@ -23620,6 +23630,21 @@ PrefabInstance:
         type: 3}
       propertyPath: startingPosition.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880377796326411204, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194235009534241800, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737674462909614615, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6743079696655301634, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
