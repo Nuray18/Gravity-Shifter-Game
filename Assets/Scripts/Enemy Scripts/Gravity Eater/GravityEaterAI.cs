@@ -41,28 +41,45 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
 
     void Update()
     {
+        if (player == null || !player.gameObject.activeInHierarchy)
+        {
+            Debug.Log("Player oldu enemyler durdu!!!");
+            agent.isStopped = true;
+            return;
+        }
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= chaseRange) // Eğer oyuncu yakınsa
+        if (distanceToPlayer <= chaseRange)
         {
-            isPlayerInZone = true;
-            isChasing = true;
-            StopCoroutine(Patrol()); // Devriyeyi durdur
-            agent.SetDestination(player.position);
+            if (!isChasing) // Eğer zaten takip ediyorsa tekrar başlatma
+            {
+                isChasing = true;
+                isPlayerInZone = true;
+                StopCoroutine(Patrol());
+            }
+
+            if (agent.destination != player.position) // Gereksiz tekrarları önle
+            {
+                agent.SetDestination(player.position);
+            }
         }
         else
         {
-            isPlayerInZone = false;
-            isChasing = false;
-            if (!isMovingToTarget)
+            if (isChasing) // Eğer kovalamıyorsa tekrar patrol başlatma
             {
-                StartCoroutine(Patrol()); // Tekrar devriyeye başla
+                isChasing = false;
+                isPlayerInZone = false;
+                StartCoroutine(Patrol());
             }
-        }
-
-        if (distanceToPlayer <= attackRange && Time.time > lastAttackTime + attackCooldown)
-        {
-            StartCoroutine(AttackPlayer());
+            if (distanceToPlayer <= attackRange && Time.time > lastAttackTime + attackCooldown)
+            {
+                if (!isAttacking) // Aynı anda tekrar tekrar saldırıyı başlatma
+                {
+                    isAttacking = true;
+                    StartCoroutine(AttackPlayer());
+                }
+            }
         }
     }
 
