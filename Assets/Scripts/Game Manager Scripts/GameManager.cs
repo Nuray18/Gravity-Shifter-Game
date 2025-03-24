@@ -38,11 +38,6 @@ public class GameManager : MonoBehaviour
         else
         {
             navMeshRebuilder = null;
-            foreach (var enemy in FindObjectsOfType<GravityEaterAI>())
-            {
-                Debug.Log("Enemy ler yok ediliyor!");
-                Destroy(enemy.gameObject);
-            }
         }
 
         FindGameOverPanel();

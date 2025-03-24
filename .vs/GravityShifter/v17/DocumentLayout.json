@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAwwGsAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T12:24:01.79Z",
               "EditorCaption": ""
@@ -109,7 +109,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
               "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAuwOQAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T10:50:45.699Z",
               "EditorCaption": ""
@@ -148,8 +148,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Game UI Scripts\\GameButtons.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAQwCoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T11:36:52.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T11:36:52.174Z"
             }
           ]
         }

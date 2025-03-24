@@ -50,38 +50,28 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= chaseRange)
+        if (distanceToPlayer <= chaseRange) // Eğer oyuncu yakınsa
         {
-            if (!isChasing) // Eğer zaten takip ediyorsa tekrar başlatma
-            {
-                isChasing = true;
-                isPlayerInZone = true;
-                StopCoroutine(Patrol());
-            }
-
-            if (agent.destination != player.position) // Gereksiz tekrarları önle
-            {
-                agent.SetDestination(player.position);
-            }
+            isChasing = true;
+            isPlayerInZone = true;
+            agent.SetDestination(player.position);
         }
-        else
+        else if (isChasing) // Eğer kovalamıyorsa patrol başlat
         {
-            if (isChasing) // Eğer kovalamıyorsa tekrar patrol başlatma
+            isChasing = false;
+            isPlayerInZone = false;
+            if (!isMovingToTarget)
             {
-                isChasing = false;
-                isPlayerInZone = false;
                 StartCoroutine(Patrol());
             }
-            if (distanceToPlayer <= attackRange && Time.time > lastAttackTime + attackCooldown)
-            {
-                if (!isAttacking) // Aynı anda tekrar tekrar saldırıyı başlatma
-                {
-                    isAttacking = true;
-                    StartCoroutine(AttackPlayer());
-                }
-            }
+        }
+
+        if (distanceToPlayer <= attackRange && Time.time > lastAttackTime + attackCooldown)
+        {
+            StartCoroutine(AttackPlayer());
         }
     }
+
 
     private IEnumerator Patrol()
     {
@@ -234,3 +224,47 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 }
+
+
+// function that i made optimized by my self (the one that is currently used is chatGPT's optimized function)
+//void Update()
+//{
+//    if (player == null || !player.gameObject.activeInHierarchy)
+//    {
+//        Debug.Log("Player oldu enemyler durdu!!!");
+//        agent.isStopped = true;
+//        return;
+//    }
+
+//    float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+//    if (distanceToPlayer <= chaseRange) // Eğer oyuncu yakınsa
+//    {
+//        if (!isChasing) // Eğer zaten takip ediyorsa tekrar başlatma
+//        {
+//            isChasing = true;
+//            isPlayerInZone = true;
+//            //StopCoroutine(Patrol());
+//        }
+//        if (agent.destination != player.position) // Gereksiz tekrarları önle
+//        {
+//            agent.SetDestination(player.position);
+//        }
+//    }
+//    else
+//    {
+//        if (isChasing) // Eğer kovalamıyorsa tekrar patrol başlatma
+//        {
+//            isChasing = false;
+//            isPlayerInZone = false;
+//            if (!isMovingToTarget)
+//            {
+//                StartCoroutine(Patrol()); // Tekrar devriyeye başla
+//            }
+//        }
+//    }
+//    if (distanceToPlayer <= attackRange && Time.time > lastAttackTime + attackCooldown)
+//    {
+//        StartCoroutine(AttackPlayer());
+//    }
+//}
