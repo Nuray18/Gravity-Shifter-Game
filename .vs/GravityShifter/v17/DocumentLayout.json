@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\azcom\\GravityShifter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\enemy scripts\\gravity eater\\gravityeaterai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\game manager scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\player scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\player scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\player scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\player scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\player scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\player scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\player scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -62,8 +62,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Guns\\Gun.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T17:44:22.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T17:44:22.602Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\PlayerHealth.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T11:11:17.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T11:11:17.33Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAQwCcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:24:01.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T12:24:01.79Z"
             },
             {
               "$type": "Document",
@@ -111,7 +108,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
               "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\Gravity Eater\\GravityEaterAI.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAqwCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAqwCoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T10:50:45.699Z",
               "EditorCaption": ""
@@ -126,8 +123,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\PlayerManager.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAvwFIAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T16:00:48.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T16:00:48.181Z"
             },
             {
               "$type": "Document",
@@ -139,8 +135,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player Scripts\\Player.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwCQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T16:26:06.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T16:26:06.83Z"
             },
             {
               "$type": "Document",

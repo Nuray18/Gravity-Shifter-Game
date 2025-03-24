@@ -41,12 +41,6 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
 
     void Update()
     {
-        if (player == null || !player.gameObject.activeInHierarchy)
-        {
-            agent.isStopped = true;
-            return;
-        }
-
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= chaseRange) // Eğer oyuncu yakınsa
