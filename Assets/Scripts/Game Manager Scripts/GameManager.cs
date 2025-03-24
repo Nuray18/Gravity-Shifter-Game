@@ -38,6 +38,10 @@ public class GameManager : MonoBehaviour
         else
         {
             navMeshRebuilder = null;
+            foreach (var enemy in FindObjectsOfType<GravityEaterAI>())
+            {
+                Destroy(enemy.gameObject);
+            }
         }
 
         FindGameOverPanel();

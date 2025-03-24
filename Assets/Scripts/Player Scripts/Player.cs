@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    public Transform PlayerTransform => transform;
+
     void Update()
     {
         CheckGravityChange();

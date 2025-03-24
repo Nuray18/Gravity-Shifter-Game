@@ -1284,7 +1284,7 @@ GameObject:
   - component: {fileID: 820520352}
   - component: {fileID: 820520351}
   - component: {fileID: 820520350}
-  - component: {fileID: 820520349}
+  - component: {fileID: 820520353}
   m_Layer: 5
   m_Name: Restart Game Button (1)
   m_TagString: Untagged
@@ -1311,19 +1311,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -19.7}
   m_SizeDelta: {x: 200, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &820520349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820520347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5647e86f97c39cf48b6949ed2185501a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backupCamera: {fileID: 1180397612}
 --- !u!114 &820520350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,8 +1355,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 820520349}
-        m_TargetAssemblyTypeName: RestartGameButton, Assembly-CSharp
+      - m_Target: {fileID: 820520353}
+        m_TargetAssemblyTypeName: GameButtons, Assembly-CSharp
         m_MethodName: RestartGameFromBeginning
         m_Mode: 1
         m_Arguments:
@@ -1442,6 +1429,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820520347}
   m_CullTransparentMesh: 1
+--- !u!114 &820520353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820520347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e227da76e3c629409df3d1181dec3aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backupCamera: {fileID: 1180397612}
+  gameOverPanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  pauseButton: {fileID: 0}
+  backButton: {fileID: 0}
 --- !u!1 &1054623535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,8 +2268,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278848201
-  m_fontColor: {r: 0.78867924, g: 0.040177934, b: 0.040177934, a: 1}
+    rgba: 4278190200
+  m_fontColor: {r: 0.4716981, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2609,7 +2613,7 @@ GameObject:
   - component: {fileID: 1573243935}
   - component: {fileID: 1573243934}
   - component: {fileID: 1573243933}
-  - component: {fileID: 1573243932}
+  - component: {fileID: 1573243936}
   m_Layer: 5
   m_Name: Leave Game Button (1)
   m_TagString: Untagged
@@ -2636,19 +2640,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -93.4}
   m_SizeDelta: {x: 200, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1573243932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573243930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa717f1e69ed7ba4ebed7524d175df88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backupCamera: {fileID: 1180397612}
 --- !u!114 &1573243933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,8 +2684,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1573243932}
-        m_TargetAssemblyTypeName: LeaveGameButton, Assembly-CSharp
+      - m_Target: {fileID: 1573243936}
+        m_TargetAssemblyTypeName: GameButtons, Assembly-CSharp
         m_MethodName: LeaveToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -2743,6 +2734,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573243930}
   m_CullTransparentMesh: 1
+--- !u!114 &1573243936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573243930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e227da76e3c629409df3d1181dec3aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backupCamera: {fileID: 1180397612}
+  gameOverPanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  pauseButton: {fileID: 0}
+  backButton: {fileID: 0}
 --- !u!1 &1596025960
 GameObject:
   m_ObjectHideFlags: 0

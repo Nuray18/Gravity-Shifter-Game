@@ -39,7 +39,6 @@ public class PlayerManager : MonoBehaviour
         isRestarting = false; // Restart tamamlandı, tekrar sahne değiştirirken çalışmasın
     }
 
-
     // bu playeri yeniden baslatir (restart veya level sceneleri gecisleri icin)
     public void RestartPlayer()
     {
@@ -72,19 +71,16 @@ public class PlayerManager : MonoBehaviour
             player.transform.position = startingPosition;
             player.transform.rotation = Quaternion.identity;
 
-            Debug.Log("Yeni pozisyon: " + player.transform.position);
 
             if (!IsGrounded(player))
             {
-                Debug.LogWarning("Player zeminde değil, aşağı çekiliyor!");
+                //Debug.LogWarning("Player zeminde değil, aşağı çekiliyor!");
                 player.transform.position += Vector3.down * 0.5f;
             }
 
             // 4. CharacterController ve Rigidbody'yi tekrar etkinleştir
             if (controller != null) controller.enabled = true;
             //if (rb != null) rb.isKinematic = false; // Fizik motorunu tekrar aç
-
-            Debug.Log("Player sıfırlandı.");
         }
         else
         {

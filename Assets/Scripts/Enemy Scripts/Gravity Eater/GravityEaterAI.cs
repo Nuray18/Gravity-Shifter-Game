@@ -30,11 +30,23 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
         agent = GetComponent<NavMeshAgent>();
         agent.speed = moveSpeed;
         initialPosition = transform.position;
+
+        player = GameObject.FindWithTag("Player")?.transform;
+        if(player != null)
+        {
+            playerScript = player.GetComponent<Player>();
+        }
         StartCoroutine(Patrol()); // Devriye başlat
     }
 
     void Update()
     {
+        if (player == null || !player.gameObject.activeInHierarchy)
+        {
+            agent.isStopped = true;
+            return;
+        }
+
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= chaseRange) // Eğer oyuncu yakınsa
