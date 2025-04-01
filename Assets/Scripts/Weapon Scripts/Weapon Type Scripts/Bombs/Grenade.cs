@@ -1,60 +1,81 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public GameObject explotionEffect;
+    public float throwForce = 10f; // Fırlatma gücü
+    public float explosionDelay = 3f; // Patlama süresi
+    public float explosionRadius = 5f; // Patlama yarıçapı
+    public float explosionForce = 700f; // Patlama gücü
+    public int damage = 50; // Verilecek hasar
+    public GameObject explosionEffect; // Patlama efekti (opsiyonel)
 
-    public float delay = 5f;
+    private bool hasExploded = false; // Tekrar patlamayı önlemek için
+    private Rigidbody rb;
 
-    private float damage = 50f;
-    private float explosionRadius = 7f;
-
-    private float countDown;
-    private bool hasExploded = false;
-
-    // Start is called before the first frame update
     void Start()
     {
-        countDown = delay;
+        rb = GetComponent<Rigidbody>();
+
+        // Patlamayı gecikmeli başlat
+        StartCoroutine(ExplodeAfterDelay());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Throw(Vector3 direction)
     {
-        countDown -= Time.deltaTime;
-        if(countDown <= 0f && hasExploded == false)
+        rb.AddForce(direction * throwForce, ForceMode.Impulse); // Bombayı fırlatma
+    }
+
+    private IEnumerator ExplodeAfterDelay()
+    {
+        yield return new WaitForSeconds(explosionDelay); // Belirtilen süre bekle
+        Explode();
+    }
+
+    void Explode()
+    {
+        if (hasExploded) return; // Eğer zaten patladıysa çık
+        hasExploded = true;
+
+        // Patlama efekti oluştur
+        if (explosionEffect != null)
         {
-            Explode();
-            hasExploded = true;
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
-    }
 
-    private void Explode()
-    {
-        // Show effect
-        Instantiate(explotionEffect, transform.position, transform.rotation);
-
-        // get nearby objects
-
+        // Patlama alanındaki objeleri bul
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 
         foreach (Collider nearbyObject in colliders)
         {
-            // Sadece "Enemy" tag'ine sahip objelere etki et
-            if (nearbyObject.CompareTag("EnemyBody"))
+            // **Rigidbody varsa itme kuvveti uygula**
+            Rigidbody targetRb = nearbyObject.GetComponent<Rigidbody>();
+            if (targetRb != null)
             {
-                // Düşmanın health componentini bul
-                IHealth enemyHealth = nearbyObject.GetComponent<IHealth>();
+                targetRb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+            }
+
+            // **Düşman veya Player’a hasar ver**
+            if (nearbyObject.CompareTag("Enemy"))
+            {
+                // Bu kod ile her bir dusman icin ayri if state yazmadan tum dusmanlar icin ortak health yaptim.
+                EnemyHealth enemyHealth = nearbyObject.GetComponent<EnemyHealth>();
                 if (enemyHealth != null)
                 {
                     enemyHealth.TakeDamage(damage);
                 }
             }
+            else if (nearbyObject.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = nearbyObject.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                }
+            }
         }
 
-        // remove grenade (destroy GameObject)
+        // **Bomba nesnesini yok et**
         Destroy(gameObject);
     }
 }

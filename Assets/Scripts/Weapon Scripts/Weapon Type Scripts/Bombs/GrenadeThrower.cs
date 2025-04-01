@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class GrenadeThrower : MonoBehaviour
 {
-    public float throwForce = 40f;
-    public GameObject grenadePrefab;
+    public GameObject grenadePrefab; // Bomban?n prefab?
 
-    private void Update()
+    void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G)) // Sa? t?k ile bomba at
         {
             ThrowGrenade();
         }
     }
 
-    private void ThrowGrenade()
+    void ThrowGrenade()
     {
-        GameObject grenade = Instantiate(grenadePrefab, transform.position, transform.rotation);
-        Rigidbody rb = grenade.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * throwForce, ForceMode.VelocityChange);
+        GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
+        Grenade grenadeScript = grenade.GetComponent<Grenade>();
+        if (grenadeScript != null)
+        {
+            grenadeScript.Throw(transform.forward); // Bombay? ileri f?rlat
+        }
     }
+
 }

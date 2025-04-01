@@ -2,35 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityEaterHealth : MonoBehaviour, IHealth
+public class GravityEaterHealth : EnemyHealth, IHealth
 {
-    private float currentHealth;
-    [SerializeField]
-    private float maxHealth = 40;
-
-    private void Start()
+    private void Awake()
     {
+        maxHealth = 40; // GravityEater için özel sağlık değeri
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
+    // bu olum durumlari her bir dusman icin farkli olabilir. O yuzden istedigimiz her bir kodu kendimizce override edeliriz.
+    protected override void Die()
     {
         GetComponent<GravityEaterAI>()?.Die();
-    }
-
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth; // Canı en yüksek seviyeye çıkar
     }
 }

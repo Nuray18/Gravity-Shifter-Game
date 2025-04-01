@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 
     private CharacterController characterController;
 
+    public GameObject grenadePrefab; // Bombanın prefabı
+
     private Vector3 gravityDir = Vector3.down;
     private Vector3 velocity;
 

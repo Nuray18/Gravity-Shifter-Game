@@ -177,7 +177,7 @@ public class GravityEaterAI : MonoBehaviour, IEnemy
         }
 
         ResetAI();
-        GetComponent<GravityEaterHealth>()?.ResetHealth();
+        GetComponent<EnemyHealth>()?.ResetHealth(); // burda ben polimorfizim kullandim ve artik sadece gravityEater degil de tum dusmanlar resetlenebilecek.
 
         if (playerScript != null)
         {
