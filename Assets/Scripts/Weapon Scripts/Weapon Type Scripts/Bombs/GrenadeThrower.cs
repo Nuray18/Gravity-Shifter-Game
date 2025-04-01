@@ -1,10 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GrenadeThrower : MonoBehaviour
 {
     public GameObject grenadePrefab; // Bomban?n prefab?
+    public Transform throwPoint;
+    public float throwForce = 15f;
 
     void Update()
     {
@@ -16,11 +18,14 @@ public class GrenadeThrower : MonoBehaviour
 
     void ThrowGrenade()
     {
-        GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
-        Grenade grenadeScript = grenade.GetComponent<Grenade>();
-        if (grenadeScript != null)
+        // Bombayı oluştur
+        GameObject grenade = Instantiate(grenadePrefab, throwPoint.position, throwPoint.rotation);
+        
+        // Rigidbody ekle ve fırlatma gücü uygula
+        Rigidbody rb = grenade.GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            grenadeScript.Throw(transform.forward); // Bombay? ileri f?rlat
+            rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
         }
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public float throwForce = 10f; // Fırlatma gücü
+    public float throwForce = 20f; // Fırlatma gücü
     public float explosionDelay = 3f; // Patlama süresi
     public float explosionRadius = 5f; // Patlama yarıçapı
     public float explosionForce = 700f; // Patlama gücü
@@ -15,21 +15,8 @@ public class Grenade : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
         // Patlamayı gecikmeli başlat
-        StartCoroutine(ExplodeAfterDelay());
-    }
-
-    public void Throw(Vector3 direction)
-    {
-        rb.AddForce(direction * throwForce, ForceMode.Impulse); // Bombayı fırlatma
-    }
-
-    private IEnumerator ExplodeAfterDelay()
-    {
-        yield return new WaitForSeconds(explosionDelay); // Belirtilen süre bekle
-        Explode();
+        Invoke("Explode", explosionDelay);
     }
 
     void Explode()
