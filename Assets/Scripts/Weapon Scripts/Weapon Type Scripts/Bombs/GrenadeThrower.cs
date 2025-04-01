@@ -1,16 +1,35 @@
-﻿using System.Collections;
+﻿
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GrenadeThrower : MonoBehaviour
 {
-    public GameObject grenadePrefab; // Bomban?n prefab?
-    public Transform throwPoint;
-    public float throwForce = 15f;
+    [Header("Refrences")]
+    public Transform cam;
+    public Transform attackPoint;
+    public GameObject objectToThrow;
+
+    [Header("Settings")]
+    public int totalThrows;
+    public float throwCoolDown;
+
+    [Header("Throwing")]
+    public KeyCode throwKey = KeyCode.G;
+    public float throwForce;
+    public float throwUpwardForce;
+
+    bool readyToThrow;
+
+    private void Start()
+    {
+        readyToThrow = true;
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G)) // Sa? t?k ile bomba at
+        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
         {
             ThrowGrenade();
         }
@@ -18,15 +37,24 @@ public class GrenadeThrower : MonoBehaviour
 
     void ThrowGrenade()
     {
-        // Bombayı oluştur
-        GameObject grenade = Instantiate(grenadePrefab, throwPoint.position, throwPoint.rotation);
-        
-        // Rigidbody ekle ve fırlatma gücü uygula
-        Rigidbody rb = grenade.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
-        }
+        readyToThrow = false;
+
+        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+
+        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+        Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
+
+        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+        totalThrows--;
+
+        Invoke(nameof(ResetThrow), throwCoolDown);
+    }
+
+    private void ResetThrow()
+    {
+        readyToThrow = true;
     }
 
 }
