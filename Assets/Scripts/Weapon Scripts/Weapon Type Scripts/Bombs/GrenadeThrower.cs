@@ -1,60 +1,92 @@
-﻿
-
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class GrenadeThrower : MonoBehaviour
 {
-    [Header("Refrences")]
     public Transform cam;
     public Transform attackPoint;
-    public GameObject objectToThrow;
+    public GameObject grenadeObject; // Eldeki bomba (Prefab DEĞİL!)
+    public GameObject grenadePrefab;
 
-    [Header("Settings")]
-    public int totalThrows;
-    public float throwCoolDown;
-
-    [Header("Throwing")]
+    public float throwForce = 20f;
+    public float throwUpwardForce = 5f;
     public KeyCode throwKey = KeyCode.G;
-    public float throwForce;
-    public float throwUpwardForce;
 
-    bool readyToThrow;
+    private bool hasGrenade = false;
+    private bool readyToThrow = true;
 
     private void Start()
     {
-        readyToThrow = true;
+        grenadeObject.SetActive(false); // **Başlangıçta bomba görünmez**
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        if (Input.GetKeyDown(throwKey) && readyToThrow && hasGrenade)
         {
             ThrowGrenade();
         }
     }
 
-    void ThrowGrenade()
+    private void ThrowGrenade()
     {
         readyToThrow = false;
+        hasGrenade = false;
 
-        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+        grenadeObject.transform.SetParent(null);
+        grenadeObject.transform.position = attackPoint.position;
 
-        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+        Rigidbody rb = grenadeObject.GetComponent<Rigidbody>();
 
-        Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
+        Vector3 throwDirection = cam.transform.forward * throwForce + cam.transform.up * throwUpwardForce;
 
-        projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+        // **Önce kinematic ve gravity kapatılmalı**
+        rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.constraints = RigidbodyConstraints.None;
 
-        totalThrows--;
+        rb.AddForce(throwDirection, ForceMode.Impulse);
 
-        Invoke(nameof(ResetThrow), throwCoolDown);
+        grenadeObject.GetComponent<Grenade>().Throw();
+
+        StartCoroutine(RespawnGrenade());
     }
 
-    private void ResetThrow()
+
+    public void ResetGrenade()
     {
+        hasGrenade = false;
         readyToThrow = true;
+        grenadeObject.SetActive(false);
     }
 
+
+    private IEnumerator RespawnGrenade()
+    {
+        yield return new WaitForSeconds(2f);
+
+        if (grenadeObject == null) // **Eğer bomba yok olduysa yeniden oluştur**
+        {
+            grenadeObject = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
+            grenadeObject.transform.SetParent(transform);
+        }
+
+        hasGrenade = true;
+        grenadeObject.transform.localPosition = Vector3.zero;
+        grenadeObject.transform.localRotation = Quaternion.identity;
+
+        Rigidbody rb = grenadeObject.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+        rb.useGravity = false;
+
+        grenadeObject.SetActive(false);
+    }
+
+
+    // **WeaponSwitch Bizi Çağıracak**
+    public void SetGrenadeActive(bool isActive)
+    {
+        grenadeObject.SetActive(isActive);
+        hasGrenade = isActive;
+    }
 }

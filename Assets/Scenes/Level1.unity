@@ -5266,37 +5266,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35, y: 0.02, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &575300534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575300535}
-  m_Layer: 6
-  m_Name: ThrowPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &575300535
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575300534}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 512596687379144410}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &584610098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23586,16 +23555,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 705689417976132990, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-        type: 3}
-      propertyPath: fpCamera
-      value: 
-      objectReference: {fileID: 512596687379144408}
-    - target: {fileID: 705689417976132990, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-        type: 3}
-      propertyPath: grenadeHoldPoint
-      value: 
-      objectReference: {fileID: 512596687379144407}
     - target: {fileID: 1469504199116465724, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23646,41 +23605,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1982611212183316137, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-        type: 3}
-      propertyPath: explosionEffect
-      value: 
-      objectReference: {fileID: 8030793852981545256, guid: d4008cfab703fac4f8fa4cd0751211c6,
-        type: 3}
-    - target: {fileID: 2959026290768742336, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959026290768742336, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6743079696655301634, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 705689417976132990, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 8585804356313208702, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 731319300590833934, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+    - target: {fileID: 7626571842207980583, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 575300535}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6743079696655301634, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+      propertyPath: grenadeObject
+      value: 
+      objectReference: {fileID: 512596687379144408}
+    - target: {fileID: 9140657930278115210, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
         type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 512596687379144412}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140657930278115210, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140657930278115210, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0, type: 3}
 --- !u!4 &512596687379144407 stripped
 Transform:
@@ -23688,9 +23641,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 512596687379144406}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &512596687379144408 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1789348615142979225, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
+--- !u!1 &512596687379144408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2372366607093155636, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
     type: 3}
   m_PrefabInstance: {fileID: 512596687379144406}
   m_PrefabAsset: {fileID: 0}
@@ -23700,45 +23653,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 512596687379144406}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512596687379144411}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e9fd40cc28568b49a5b7dccec530e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &512596687379144410 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 731319300590833934, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-    type: 3}
-  m_PrefabInstance: {fileID: 512596687379144406}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &512596687379144411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6743079696655301634, guid: 3d7edd0370f18a146ac2ef1f5ddc9fa0,
-    type: 3}
-  m_PrefabInstance: {fileID: 512596687379144406}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &512596687379144412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512596687379144411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c07e8e54958c5e4bb87cf5650b49d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 512596687379144410}
-  attackPoint: {fileID: 575300535}
-  objectToThrow: {fileID: 3386235724659901517, guid: 25bb76c6e61f8d94b91e35afa7cb8719,
-    type: 3}
-  totalThrows: 100
-  throwCoolDown: 0.1
-  throwKey: 103
-  throwForce: 70
-  throwUpwardForce: 0
 --- !u!1001 &6274135645968362695
 PrefabInstance:
   m_ObjectHideFlags: 0

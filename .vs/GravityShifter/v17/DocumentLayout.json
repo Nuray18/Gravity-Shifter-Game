@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\azcom\\GravityShifter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\bombs\\grenadethrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weapon type scripts\\bombs\\grenadethrower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|c:\\users\\azcom\\gravityshifter\\assets\\scripts\\weapon scripts\\weaponswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weaponswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\bombs\\grenade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weapon type scripts\\bombs\\grenade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|solutionrelative:assets\\scripts\\weapon scripts\\weapon type scripts\\guns\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D651077-2562-45A6-F3B2-561462AF72F7}|Assembly-CSharp.Player.csproj|C:\\Users\\azcom\\GravityShifter\\assets\\scripts\\player scripts\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +50,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "WeaponSwitch.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\WeaponSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon Scripts\\WeaponSwitch.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\WeaponSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\WeaponSwitch.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:10:58.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Grenade.cs",
+              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
+              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwCcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T06:56:53.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Player Scripts\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\PlayerManager.cs",
@@ -58,44 +88,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Gun.cs",
               "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Guns\\Gun.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Guns\\Gun.cs",
               "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Guns\\Gun.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Guns\\Gun.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwCEAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAewCEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T08:42:29.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T08:42:29.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Grenade.cs",
-              "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
-              "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\Grenade.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwBMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T06:56:53.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GrenadeThrower.cs",
               "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\GrenadeThrower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\GrenadeThrower.cs",
               "ToolTip": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\GrenadeThrower.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapon Scripts\\Weapon Type Scripts\\Bombs\\GrenadeThrower.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T06:57:36.057Z"
+              "WhenOpened": "2025-03-31T06:57:36.057Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Player Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player Scripts\\Player.cs",
@@ -107,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\azcom\\GravityShifter\\Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Manager Scripts\\GameManager.cs",
