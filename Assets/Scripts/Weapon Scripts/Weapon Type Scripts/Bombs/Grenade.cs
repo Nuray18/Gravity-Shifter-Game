@@ -3,31 +3,61 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    private float timer = 2;
-    private float countDown;
-    private float radius = 3;
-    private bool hasExploded;
-    private float force = 500;
-    private float damage = 50f;
+    [Header("Explosion Settings")]
+    [SerializeField] private float timer = 2f;
+    [SerializeField] private float radius = 3f;
+    [SerializeField] private float force = 500f;
+    [SerializeField] private float damage = 50f;
+    [SerializeField] private GameObject explodeEffect;
 
-    public GameObject explodeEffect;
+    private float countDown;
+    private bool hasExploded = false;
+    private bool isThrown = false;
+
+    private Rigidbody rb;
 
     private void Start()
     {
         countDown = timer;
+        rb = GetComponent<Rigidbody>();
+
+        rb.isKinematic = true;
+        rb.useGravity = false;
+
+        rb.drag = 0.5f;
+        rb.angularDrag = 0.8f;
     }
 
     private void Update()
     {
-        countDown -= Time.deltaTime;
-        if(countDown <= 0 && !hasExploded)
+        if (isThrown)
         {
-            Explode();
+            countDown -= Time.deltaTime;
+
+            if (countDown <= 0 && !hasExploded)
+            {
+                Explode();
+            }
         }
+    }
+
+    public void Throw(Vector3 throwDirection, float throwForce)
+    {
+        rb.isKinematic = false; // **Fırlatınca fiziği aç**
+        rb.useGravity = true;
+        rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+
+        // 🎯 Havada sürtünme ekleyelim ki sonsuza kadar gitmesin
+        rb.drag = 1.5f;        // **Havada daha fazla yavaşlama**
+        rb.angularDrag = 2f;   // **Dönüş daha yavaş olsun**
+
+        isThrown = true;
     }
 
     private void Explode()
     {
+        hasExploded = true;
+
         GameObject spawnedParticle = Instantiate(explodeEffect, transform.position, transform.rotation);
         Destroy(spawnedParticle, 1);
 
@@ -61,9 +91,33 @@ public class Grenade : MonoBehaviour
 
 
         }
-
-        hasExploded = true;
         Destroy(gameObject);
     }
 
+    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!isThrown) return;
+
+        float impactSpeed = collision.relativeVelocity.magnitude;
+        float slowDownFactor = Mathf.Lerp(0.7f, 0.95f, impactSpeed / 15f);
+
+        rb.velocity *= slowDownFactor;
+        rb.angularVelocity *= slowDownFactor;
+
+        if (rb.velocity.magnitude < 0.05f)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (!isThrown) return;
+
+        rb.velocity *= 0.98f;
+        rb.angularVelocity *= 0.95f;
+    }
 }
