@@ -47,8 +47,6 @@ public class GrenadeThrower : MonoBehaviour
 
         rb.AddForce(throwDirection, ForceMode.Impulse);
 
-        grenadeObject.GetComponent<Grenade>().Throw();
-
         StartCoroutine(RespawnGrenade());
     }
 

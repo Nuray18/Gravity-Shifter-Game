@@ -3,11 +3,9 @@
 public class WeaponSwitch : MonoBehaviour
 {
     public int selectedWeapon = 0;
-    private GrenadeThrower grenadeThrower;
 
     private void Start()
     {
-        grenadeThrower = GetComponentInChildren<GrenadeThrower>();
         SelectWeapon();
     }
 
@@ -32,28 +30,21 @@ public class WeaponSwitch : MonoBehaviour
 
     private void SelectWeapon()
     {
-        int i = 0;
+        int weaponIndex = 0;
         foreach (Transform weapon in transform)
         {
+            // Eğer child objenin adı "ThrowPoint" ise onu yok say
             if (weapon.name == "ThrowPoint") continue;
 
-            bool isSelected = (i == selectedWeapon);
-            weapon.gameObject.SetActive(isSelected);
-
-            if (weapon.name == "Grenade" && grenadeThrower != null)
+            if (weaponIndex == selectedWeapon)
             {
-                grenadeThrower.SetGrenadeActive(isSelected);
-                if (!isSelected)
-                {
-                    grenadeThrower.ResetGrenade();
-                }
-                else
-                {
-                    grenadeThrower.SetGrenadeActive(true); // **Bomba seçildiğinde tekrar aç**
-                }
+                weapon.gameObject.SetActive(true);
             }
-            i++;
+            else
+            {
+                weapon.gameObject.SetActive(false);
+            }
+            weaponIndex++;
         }
     }
-
 }

@@ -3,45 +3,67 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public float explosionDelay = 3f;
-    public float explosionRadius = 5f;
-    public float explosionForce = 700f;
-    public GameObject explosionEffect;
-    private Rigidbody rb;
+    private float timer = 2;
+    private float countDown;
+    private float radius = 3;
+    private bool hasExploded;
+    private float force = 500;
+    private float damage = 50f;
+
+    public GameObject explodeEffect;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
-        // **Başlangıçta fizik kapalı**
-        rb.isKinematic = true;
-        rb.useGravity = false;
+        countDown = timer;
     }
 
-    public void Throw()
+    private void Update()
     {
-        StartCoroutine(Explode());
-    }
-
-    private IEnumerator Explode()
-    {
-        yield return new WaitForSeconds(explosionDelay);
-
-        if (explosionEffect != null)
+        countDown -= Time.deltaTime;
+        if(countDown <= 0 && !hasExploded)
         {
-            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Explode();
         }
+    }
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
-        foreach (Collider nearbyObject in colliders)
+    private void Explode()
+    {
+        GameObject spawnedParticle = Instantiate(explodeEffect, transform.position, transform.rotation);
+        Destroy(spawnedParticle, 1);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        foreach(Collider nearbyObject in colliders)
         {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-            if (rb != null)
+            if(rb != null)
             {
-                rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                rb.AddExplosionForce(force, transform.position, radius);
             }
+
+            // **Düşman veya Player’a hasar ver**
+            if (nearbyObject.CompareTag("Enemy"))
+            {
+                // Bu kod ile her bir dusman icin ayri if state yazmadan tum dusmanlar icin ortak health yaptim.
+                EnemyHealth enemyHealth = nearbyObject.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage(damage);
+                }
+            }
+            else if (nearbyObject.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = nearbyObject.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(damage);
+                }
+            }
+
+
         }
 
+        hasExploded = true;
         Destroy(gameObject);
     }
+
 }
